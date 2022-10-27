@@ -1,0 +1,122 @@
+1)class Movie{
+   constructor(title,studio,rating='PG'){
+      this.title=title;
+      this.studio=studio;
+      this.rating= rating;
+   }
+   static getPG = function(array){
+      var result= array.filter((element)=>element.rating=="PG")
+         return result;
+   }
+   }
+
+let Movie1 = new Movie("Rolex","KVM studio") 
+let Movie2 = new Movie("Casino Royale","Eon Productions","PG13")
+let Movie3 = new Movie("vikam","rajakamal")
+let Movie4 = new Movie("A","red","R19")
+
+
+ const array=[Movie1,Movie2,Movie3,Movie4]
+ console.log(Movie.getPG(array))
+
+
+
+ 2)class circle{
+   constructor(radius,color){
+      this.radius=radius;
+      this.color=color;
+   }
+   getRadius(){
+      return(`Radius of the given circle ${this.radius}`)
+   }
+   setRadius(radi){
+      this.radius=radi
+   }
+   getcolor(){
+      return(`The color of the given circle is ${this.color}`)
+   }
+   setcolor(col){
+         this.color=col;
+   }
+   toString() {
+      return (`circle[radius=${this.radius},color=${this.color}]`)
+   }
+   getarea(){
+      const pi=3.14;
+      return (`the area of the circle is ${pi*(this.radius*this.radius)} `)
+   }
+   getcircumference(){
+      const pi=3.14;
+      return(`The circumference of the circle is ${2*pi*this.radius}`)
+
+      }
+   }
+   let circle1= new circle(1.0,"red")
+   console.log(circle1.radius)
+   console.log(circle1.color)
+   console.log(circle1.getRadius())
+   console.log(circle1.getcolor())
+
+   var str =circle1.toString();
+   console.log(str)
+   
+   console.log(circle1.getarea())
+   console.log(circle1.getcircumference())
+
+
+
+3)class person{
+    constructor(name,age,place,job,hobby,gender,language){
+      this.name=name;
+      this.age=age;
+      this.place=place;
+      this.job=job;
+      this.hobby=hobby;
+      this.gender=gender;
+      this.language=language;
+    }
+    getDetails(){
+      return(`The name of the person is ${this.name} and age of the person is ${this.age} and the staying place of the person is ${this.place} and hobby of the person is ${this.hobby} and gender of the person is ${this.gender} and the language know by the person is ${this.language} `)
+    }
+    
+}
+
+let person1=new person("Dhoni","41","Ranchi","GUlf","Cricket","Male","Tamil")
+
+console.log(person1.getDetails())
+console.log(person1.name)
+console.log(person1.age)
+console.log(person1.place)
+console.log(person1.job)
+console.log(person1.hobby)
+console.log(person1.language)
+
+
+4)class uber{
+   constructor(distance,rate,waitingperiod){
+      this.distance=distance;
+      this.rate=rate;
+      this.waitingperiod=waitingperiod;
+   }
+   setdistance(dist){
+      this.distance=dist
+   }
+   setrating(amount){
+      this.rate=amount;
+   }
+   getPrice(){
+      let price= (this.distance*this.rate)+ (10*this.waitingperiod)
+      return price;
+   }
+}
+let uber1=new uber(200,15,5)
+uber1.setdistance(500)
+uber1.setrating(20)
+console.log(uber1.getPrice())
+
+
+
+
+
+
+
